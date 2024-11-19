@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Spring MVC</title>
+    <title>Home</title>
 </head>
 <body>
-    <h1 th:text="${message}"></h1>
+    <h1>Lista de Usuarios</h1>
+    <ul>
+        <li th:each="user : ${users}">
+            <span th:text="${user.name}">Nombre</span> - 
+            <span th:text="${user.email}">Email</span>
+        </li>
+    </ul>
+
+    <h2>Añadir un Usuario</h2>
+    <form action="/addUser" method="post">
+        <input type="text" name="name" placeholder="Nombre" required>
+        <input type="email" name="email" placeholder="Correo Electrónico" required>
+        <button type="submit">Añadir Usuario</button>
+    </form>
 </body>
 </html>

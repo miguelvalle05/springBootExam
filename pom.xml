@@ -45,6 +45,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+		  <!-- Dependencia de Spring Boot Starter Data JPA para la persistencia de datos -->
+    	<dependency>
+    	    <groupId>org.springframework.boot</groupId>
+    	    <artifactId>spring-boot-starter-data-jpa</artifactId>
+    	</dependency>
+    	<!-- H2 Database para usar una base de datos en memoria (opcional para prueba) -->
+    	<dependency>
+    	    <groupId>com.h2database</groupId>
+    	    <artifactId>h2</artifactId>
+    	    <scope>runtime</scope>
+    	</dependency>
 	
 	</dependencies>
 
